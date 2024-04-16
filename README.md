@@ -55,4 +55,4 @@ Our Terraform setup is neatly tucked away in an Azure Blob Storage backend. Orga
 - Screenshot of GitHub Actions workflows:
 
  ![A screenshot of a computer Description automatically
-generated]([1.png))
+generated](./1.png)
