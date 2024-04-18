@@ -1,3 +1,4 @@
+
 # CST8918 - DevOps: Infrastructure as Code
 Professor: Robert McKenney
 
@@ -56,3 +57,4 @@ Our Terraform setup is neatly tucked away in an Azure Blob Storage backend. Orga
 
  ![A screenshot of a computer Description automatically
 generated](./1.png)
+
