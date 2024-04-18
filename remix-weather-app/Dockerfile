@@ -7,6 +7,12 @@ RUN apk -U add --update-cache openssl
 # set for base and all layer that inherit from it
 ENV NODE_ENV=production
 
+# Copy the .env file
+COPY .env .env
+
+# Set the API key environment variable
+ENV WEATHER_API_KEY=$WEATHER_API_KEY
+
 # Install all node_modules, including dev dependencies
 FROM base as deps
 
