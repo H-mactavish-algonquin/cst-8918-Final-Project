@@ -1,0 +1,34 @@
+# .github/workflows/terraform-static-analysis.yml
+name: Terraform Static Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - prod
+      - test
+
+jobs:
+  terraform-fmt:
+    name: "Terraform Format"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Terraform Format
+        run: terraform fmt -check
+
+  terraform-validate:
+    name: "Terraform Validate"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Terraform Validate
+        run: terraform validate
+
+  tfsec:
+    name: "Terraform Security"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Terraform Security Check
+        uses: aquasecurity/tfsec-action@master
